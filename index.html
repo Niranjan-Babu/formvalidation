@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./formvalidation.css"/>
+    <title>FormValidation</title>
+    <script>
+        function Validation(){
+          var name =document.forms.Form.Name.value;
+          var email =document.forms.Form.emailid.value;
+          var phnum=document.forms.Form.phonenumber.value;
+          var pass=document.forms.Form.password.value;
+          var confirm_pass=document.forms.Form.conpass.value;
+        if (name == "" || name.length < 5) {
+          window.alert("Name must be filled out and must be more than 5 letter");
+          return false;
+        }
+        else if(phnum == '' || phnum.length < 10 || phnum == 1234567890){
+          window.alert("Enter a valid Phone Number");
+          return false;
+        }
+        else if(pass == name || pass.length < 8){
+          window.alert("Password cannot be name of the User and less than 8 characters")
+          return false;
+        }
+        else if(pass == "password" || pass == "Password"){
+          window.alert("Use strong password");
+          return false;
+        }
+        else if(pass != confirm_pass){
+          window.alert("Confirm password must be same as password ")
+          return false;
+        }
+        else{
+          window.alert("Successfully User Registered");
+          return true;
+        }
+      
+        }
+      </script>
+</head>
+<body>
+        <form  name='Form' class="formbox" onsubmit="return Validation()" >
+            <div class="head">Login Form</div>
+            <p class="content">Full Name  <input type="text" name="Name"/></p>
+            <p class="content">Email <input type="email" name="emailid" /></p>
+            <p class="content">Phone Number<input type="number" name="phonenumber" ></p>
+            <p class="content">Password <input type="password" name="password" /></p>
+            <p class="content">Confirm Password <input type="password" name="conpass" /></p>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+</body>
+
+</html>

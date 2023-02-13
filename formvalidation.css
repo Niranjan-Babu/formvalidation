@@ -1,0 +1,46 @@
+.formbox{
+    position: relative;
+    height: 74vh;
+    width: 40vw;
+    background-color: aqua;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+    top: 13vh;
+    font-size: 22px;
+    border-radius: 10px;
+}
+.head{
+    position: relative;
+    font-size: 30px;
+    height: 5vh;
+    top: 2vh;
+   text-align: center;
+    
+}
+input{
+    position: absolute;
+    width: 15vw;
+    right: 8vw;
+    height: 4vh;
+    border-radius: 4px;
+    border:1px solid black;
+    outline: none;
+    font-size: 18px;
+    text-indent: 1vw;
+}
+.content{
+    position: relative;
+    top: 2vh;
+    left: 4vw;
+}
+.btn{
+    position: relative;
+    margin: auto;
+    height: 5vh;
+    width: 7vw;
+    border: none;
+    border-radius: 4px;
+    background-color: White;
+}
